@@ -32,13 +32,13 @@
           }
         }
       ],
-      "returns":[
+      "returns": [
         {
           "arg": "",
           "type": "object",
           "root": true
-        }]
-      ,
+        }
+      ],
       "description": "Fetch blogs",
       "http": [
         {
@@ -71,6 +71,83 @@
         {
           "path": "/",
           "verb": "post"
+        }
+      ]
+    },
+    "putBlog": {
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "any",
+          "required": true,
+          "description": "userId"
+        },
+        {
+          "arg": "name",
+          "type": "string",
+          "required": false,
+          "description": ""
+        },
+        {
+          "arg": "content",
+          "type": "string",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "returns":  {
+        "arg": "",
+        "type": "object",
+        "root": true
+      },
+      "description": "update a blog using blogId",
+      "http": [
+        {
+          "path": "/:id",
+          "verb": "put"
+        }
+      ]
+    },
+    "deleteBlog": {
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "number",
+          "required": true,
+          "description": "blogId"
+        }
+      ],
+      "returns": {
+        "arg": "count",
+        "type": "number"
+      },
+      "description": "delete blog by its id",
+      "http": [
+        {
+          "path": "/:id",
+          "verb": "delete"
+        }
+      ]
+    },
+    "findBlogById": {
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "number",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns":  {
+        "arg": "",
+        "type": "object",
+        "root": true
+      },
+      "description": "find blogs by id",
+      "http": [
+        {
+          "path": "/:id",
+          "verb": "get"
         }
       ]
     }
