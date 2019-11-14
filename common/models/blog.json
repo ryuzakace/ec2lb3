@@ -1,0 +1,78 @@
+{
+  "name": "blog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "fetchBlogs": {
+      "accepts": [
+        {
+          "arg": "limit",
+          "type": "number",
+          "required": false,
+          "description": "limit results",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns":[
+        {
+          "arg": "",
+          "type": "object",
+          "root": true
+        }]
+      ,
+      "description": "Fetch blogs",
+      "http": [
+        {
+          "path": "/",
+          "verb": "get"
+        }
+      ]
+    },
+    "addBlog": {
+      "accepts": [
+        {
+          "arg": "name",
+          "type": "string",
+          "required": false,
+          "description": ""
+        },
+        {
+          "arg": "content",
+          "type": "string",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "returns": {
+        "arg": "id",
+        "type": "number"
+      },
+      "description": "",
+      "http": [
+        {
+          "path": "/",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}
