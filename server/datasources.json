@@ -1,6 +1,12 @@
 {
+
   "db": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "hytdb",
+    "password": "shirish321",
     "name": "db",
-    "connector": "memory"
+    "user": "ryuzakace",
+    "connector": "postgresql"
   }
 }

@@ -95,7 +95,7 @@
           "description": ""
         }
       ],
-      "returns":  {
+      "returns": {
         "arg": "",
         "type": "object",
         "root": true
@@ -138,7 +138,7 @@
           "description": ""
         }
       ],
-      "returns":  {
+      "returns": {
         "arg": "",
         "type": "object",
         "root": true
