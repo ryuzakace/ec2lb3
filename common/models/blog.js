@@ -183,7 +183,7 @@ module.exports = function(Blog) {
     return resp;}else{
       let e = {};
       e.statusCode = 404;
-      e.message = 'non found';
+      e.message = 'not found';
       throw e;
 
     }
